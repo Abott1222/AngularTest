@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor = 'let name of names'> {{name}} </li>
+  <!-- Result of loop element gets assigned to name which is the input var -->
+  <app-user-item
+    *ngFor = 'let nameOfUserFromList of names'
+    [name] = 'nameOfUserFromList'>
+  </app-user-item>
+</ul>
