@@ -1,6 +1,19 @@
 <h1>
   {{title}}
 </h1>
+<div class = "appConents">
+  <form class = "ui large form segment">
+    <div class="field">
+      <label for="title"> Title: </label>
+      <input name = "title" #newtitle />
+    </div>
+    <div class="field">
+      <label for="link"> Link: </label>
+      <input name = "link" #newlink />
+    </div>
+  </form>
+  <button (click)="AddArticle(newtitle,newlink)"> Submit link </button>
+</div>
 
 <app-user-item></app-user-item>
 <app-event-list></app-event-list>
