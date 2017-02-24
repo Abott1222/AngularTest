@@ -8,10 +8,5 @@ import { Component, Input } from '@angular/core';
 export class AppComponent {
   title = 'app works!';
 
-  AddArticle(title: HTMLInputElement, link:HTMLInputElement):boolean {
-    //console.log(`Adding title ${title.value} and link $(link.value)`);
-    console.log(title.value,link.value);
-
-    return false;
-  }
+  
 }

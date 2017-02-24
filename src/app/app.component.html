@@ -1,6 +1,11 @@
 <h1>
   {{title}}
 </h1>
+
+<app-user-item></app-user-item>
+<app-event-list>
+</app-event-list>
+<app-user-list #list></app-user-list>
 <div class = "appConents">
   <form class = "ui large form segment">
     <div class="field">
@@ -12,9 +17,5 @@
       <input name = "link" #newlink />
     </div>
   </form>
-  <button (click)="AddArticle(newtitle,newlink)"> Submit link </button>
+  <button (click)="list.AddArticle(newtitle)"> Submit link </button>
 </div>
-
-<app-user-item></app-user-item>
-<app-event-list></app-event-list>
-<app-user-list></app-user-list>
