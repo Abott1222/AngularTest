@@ -3,6 +3,7 @@
   <!-- Result of loop element gets assigned to name which is the input var -->
   <app-user-item #list
     *ngFor = 'let nameOfUserFromList of users'
+    (click) = "handleUserClick(nameOfUserFromList)"
     [name] = 'nameOfUserFromList'>
   </app-user-item>
 </ul>

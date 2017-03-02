@@ -1,5 +1,6 @@
 import { Component, Input,Output, OnInit } from '@angular/core';
 import {UserService} from '../shared/user.service'
+import {ToastrService} from "../shared/toastr.service"
 
 @Component({
   selector: 'app-user-list',
@@ -12,7 +13,7 @@ export class UserListComponent implements OnInit {
   @Input() newData: string;
   users: any[];
 
-  constructor(private userService:UserService) {
+  constructor(private userService:UserService, private toastr:ToastrService) {
 
 
   }
@@ -23,6 +24,10 @@ export class UserListComponent implements OnInit {
 
 
     return false;
+  }
+
+  handleUserClick(nameOfUserFromList) {
+    this.toastr.success(nameOfUserFromList);
   }
 
   ngOnInit() {

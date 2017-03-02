@@ -8,6 +8,7 @@ import { UserItemComponent } from './user-item/user-item.component';
 import { EventListComponent} from './event-list.component';
 import { UserListComponent } from './user-list/user-list.component';
 import {UserService} from './shared/user.service';
+import {ToastrService} from "./shared/toastr.service"
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import {UserService} from './shared/user.service';
     FormsModule,
     HttpModule
   ],
-  providers: [UserService],
+  providers: [UserService, ToastrService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
