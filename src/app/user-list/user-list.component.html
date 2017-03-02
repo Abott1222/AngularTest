@@ -2,7 +2,7 @@
   <li *ngFor = 'let name of names'> {{name}} </li>
   <!-- Result of loop element gets assigned to name which is the input var -->
   <app-user-item #list
-    *ngFor = 'let nameOfUserFromList of names'
+    *ngFor = 'let nameOfUserFromList of users'
     [name] = 'nameOfUserFromList'>
   </app-user-item>
 </ul>

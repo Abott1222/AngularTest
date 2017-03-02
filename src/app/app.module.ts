@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { UserItemComponent } from './user-item/user-item.component';
 import { EventListComponent} from './event-list.component';
 import { UserListComponent } from './user-list/user-list.component';
+import {UserService} from './shared/user.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { UserListComponent } from './user-list/user-list.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

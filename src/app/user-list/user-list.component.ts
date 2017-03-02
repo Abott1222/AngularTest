@@ -1,4 +1,5 @@
 import { Component, Input,Output, OnInit } from '@angular/core';
+import {UserService} from '../shared/user.service'
 
 @Component({
   selector: 'app-user-list',
@@ -9,21 +10,23 @@ export class UserListComponent implements OnInit {
   names: Array<string>;
   mine: string;
   @Input() newData: string;
+  users: any[];
 
-  constructor() {
-    this.names = ['Alex', 'Joe', 'Carla'];
-    this.mine = this.names[0];
+  constructor(private userService:UserService) {
+
+
   }
 
   AddArticle(title: HTMLInputElement, link:HTMLInputElement):boolean {
     //console.log(`Adding title ${title.value} and link $(link.value)`);
-    this.names.push(title.value);
+    this.users.push(title.value);
 
 
     return false;
   }
 
   ngOnInit() {
+    this.users = this.userService.getEvents();
   }
 
 }
