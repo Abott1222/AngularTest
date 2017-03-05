@@ -13,6 +13,7 @@ export class UserListComponent implements OnInit {
   @Input() newData: string;
   users: any[];
 
+  //this is how to do dependency injection
   constructor(private userService:UserService, private toastr:ToastrService) {
 
 
@@ -20,7 +21,7 @@ export class UserListComponent implements OnInit {
 
   AddArticle(title: HTMLInputElement, link:HTMLInputElement):boolean {
     //console.log(`Adding title ${title.value} and link $(link.value)`);
-    this.users.push(title.value);
+    this.users.push({name:title.value, id: null});
 
 
     return false;

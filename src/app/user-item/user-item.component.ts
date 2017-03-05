@@ -6,11 +6,11 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./user-item.component.css']
 })
 export class UserItemComponent implements OnInit {
-  @Input() name: string;
+  @Input() user: any;
 
 
   constructor() {
-	
+
   }
 
   ngOnInit() {

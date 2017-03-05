@@ -5,22 +5,26 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { UserItemComponent } from './user-item/user-item.component';
-import { EventListComponent} from './event-list.component';
 import { UserListComponent } from './user-list/user-list.component';
+
+import {UserDetailsComponent} from "./user-details/user-details.component";
 import {UserService} from './shared/user.service';
 import {ToastrService} from "./shared/toastr.service"
+import {RouterModule} from "@angular/router"
+import {appRoutes} from "./routes"
 
 @NgModule({
   declarations: [
     AppComponent,
     UserItemComponent,
-    EventListComponent,
-    UserListComponent
+    UserListComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [UserService, ToastrService],
   bootstrap: [AppComponent]

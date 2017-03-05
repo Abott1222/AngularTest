@@ -1,0 +1,22 @@
+<div class="container">
+  <img class="user-image" [src]="user?.imageUrl" [alt]="user?.name">
+
+  <div class="row">
+    <div class="col-md-11">
+      <h2>{{user}} </h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div><strong>Name:</strong> {{user?.name}}</div>
+    </div>
+    <div class="col-md-6">
+      <address>
+        <strong>Address:</strong><br />
+        {{user?.location?.address}}<br />
+        {{user?.location?.city}}, {{user?.location?.country}}
+      </address>
+    </div>
+  </div>
+</div>
