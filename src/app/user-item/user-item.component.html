@@ -1,4 +1,5 @@
-<p>
+<!-- tells angular this is a route and combines /users/{{user.id}} -->
+<p [routerLink] = "['/users', user.id]">
   user-item works!
 
   Hi my name is chicka chicka ... {{user.name}}

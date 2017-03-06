@@ -10,6 +10,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import {UserDetailsComponent} from "./user-details/user-details.component";
 import {UserService} from './shared/user.service';
 import {ToastrService} from "./shared/toastr.service"
+import {CreateUserComponent} from "./shared/create-user.component"
 import {RouterModule} from "@angular/router"
 import {appRoutes} from "./routes"
 
@@ -18,7 +19,8 @@ import {appRoutes} from "./routes"
     AppComponent,
     UserItemComponent,
     UserListComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,
