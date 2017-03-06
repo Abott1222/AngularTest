@@ -10,5 +10,7 @@ export const appRoutes:Routes = [
   {path: "users/:id", component: UserDetailsComponent},
   {path: "", redirectTo: "/users", pathMatch:"full"}
 
+  
+
 
 ]

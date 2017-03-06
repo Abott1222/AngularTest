@@ -1,5 +1,6 @@
 import {Component, OnInit} from "@angular/core/";
 import {UserService} from "../shared/user.service";
+import {ActivatedRoute} from "@angular/router";
 
 
 @Component({
@@ -11,7 +12,8 @@ import {UserService} from "../shared/user.service";
     }
 
     .user-image {
-      height:100px;
+      height:200px;
+      width:200px;
     }
   `]
 })
@@ -19,9 +21,9 @@ import {UserService} from "../shared/user.service";
 export class UserDetailsComponent implements OnInit {
 user:any
 
-constructor(private userService:UserService) {}
+constructor(private userService:UserService, private route:ActivatedRoute) {}
 
 ngOnInit() {
-  this.user = this.userService.getUser(1);
+  this.user = this.userService.getUser(+this.route.snapshot.params["id"]);
 }
 }
