@@ -1,9 +1,16 @@
 import {Injectable} from '@angular/core'
+import {Subject} from "rxjs/Rx"
 
 @Injectable()
 export class UserService {
-  getEvents() {
-    return USERS;
+  getUsers() {
+    let subject = new Subject()
+    //using setTimout to simular asynchonous call(like AJAX)
+    setTimeout(() =>{
+      subject.next(USERS);
+      subject.complete();
+    },2000)
+    return subject;
   }
 
   getUser(id:number) {

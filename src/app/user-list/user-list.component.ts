@@ -1,6 +1,8 @@
 import { Component, Input,Output, OnInit } from '@angular/core';
 import {UserService} from '../shared/user.service'
 import {ToastrService} from "../shared/toastr.service"
+import {ActivatedRoute} from "@angular/router"
+
 
 @Component({
   selector: 'app-user-list',
@@ -11,10 +13,10 @@ export class UserListComponent implements OnInit {
   names: Array<string>;
   mine: string;
   @Input() newData: string;
-  users: any[];
+  users: any;
 
   //this is how to do dependency injection
-  constructor(private userService:UserService, private toastr:ToastrService) {
+  constructor(private route:ActivatedRoute,private userService:UserService, private toastr:ToastrService) {
 
 
   }
@@ -31,8 +33,10 @@ export class UserListComponent implements OnInit {
     this.toastr.success(nameOfUserFromList);
   }
 
+  //because getEvents is now using observable stream we need to subscribe to it
   ngOnInit() {
-    this.users = this.userService.getEvents();
+    this.users = this.route.snapshot.data['users']
+    //this.userService.getUsers().subscribe(users => {this.users = users});
   }
 
 }

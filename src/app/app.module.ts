@@ -13,6 +13,7 @@ import {ToastrService} from "./shared/toastr.service"
 import {CreateUserComponent} from "./shared/create-user.component"
 import {RouterModule} from "@angular/router"
 import {appRoutes} from "./routes"
+import {UserListResolver} from "./shared/user-list.resolver.service"
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import {appRoutes} from "./routes"
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [UserService, ToastrService],
+  providers: [UserService, ToastrService, UserListResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
