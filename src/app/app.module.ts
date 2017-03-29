@@ -3,17 +3,21 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { AppComponent } from './app.component';
-import { UserItemComponent } from './user-item/user-item.component';
-import { UserListComponent } from './user-list/user-list.component';
+import {
+  AppComponent,
+  UserItemComponent,
+  UserListComponent,
+  UserDetailsComponent,
+  UserService,
+  ToastrService,
+  CreateUserComponent,
+  appRoutes,
+  UserListResolver
+} from "./index"
 
-import {UserDetailsComponent} from "./user-details/user-details.component";
-import {UserService} from './shared/user.service';
-import {ToastrService} from "./shared/toastr.service"
-import {CreateUserComponent} from "./shared/create-user.component"
+
+
 import {RouterModule} from "@angular/router"
-import {appRoutes} from "./routes"
-import {UserListResolver} from "./shared/user-list.resolver.service"
 
 @NgModule({
   declarations: [
