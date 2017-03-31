@@ -16,7 +16,7 @@ import {
 } from "./index"
 
 
-
+import {AuthService} from "./user/auth.service"
 import {RouterModule} from "@angular/router"
 
 @NgModule({
@@ -33,7 +33,7 @@ import {RouterModule} from "@angular/router"
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [UserService, ToastrService, UserListResolver],
+  providers: [UserService, ToastrService, UserListResolver, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
