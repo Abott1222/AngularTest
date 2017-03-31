@@ -15,7 +15,7 @@ import {
   UserListResolver
 } from "./index"
 
-
+import {NavComponent} from "./nav/nav.component"
 import {AuthService} from "./user/auth.service"
 import {RouterModule} from "@angular/router"
 
@@ -25,7 +25,8 @@ import {RouterModule} from "@angular/router"
     UserItemComponent,
     UserListComponent,
     UserDetailsComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

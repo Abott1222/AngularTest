@@ -1,0 +1,6 @@
+<!-- <p [routerLink] = "['/user/login']"> Login Dude! </p> -->
+
+<ul>
+  <li *ngIf="!auth.isAuthenticated()" [routerLink] = "['/user/login']"> Login </li>
+  <li *ngIf="auth.isAuthenticated()" [routerLink] = "['/user/profile']" > Welcome {{auth.currentUser.firstName}}! </li>
+</ul>
